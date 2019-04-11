@@ -14,7 +14,6 @@
     />
   </head>
   <body>
-<<<<<<< HEAD
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
@@ -34,7 +33,7 @@
                 
                 <div class="text-center">
                   <a href="/tables"
-                  ><button class="btn btn-lg btn-primary">
+                  ><button onclick="getLocation()" class="btn btn-lg btn-primary">
                     <span class="fa fa-location-arrow"></span></button
                     ></a>
                   </div>
@@ -53,10 +52,25 @@
             <a href="/api/waitlist">About us</a>
           </p>
         </div>
+
       </footer>
     </div>
-=======
-    <h1>2 pugs and a fox</h1>
->>>>>>> master
+    <script>
+      // this is to get the location 
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
   </body>
 </html>
