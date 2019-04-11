@@ -14,6 +14,63 @@
     />
   </head>
   <body>
-    <h1>2 pugs and a fox</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <span class="fa fa-paw"></span> Barks & Brews
+        </h1>
+        <hr />
+        <h2 class="text-center">
+          Find dog friendly bars in your area!
+        </h2>
+        <br />
+
+        <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="name"></label>
+                <input type="text" placeholder="Location" class="form-control" id="name" required/>
+                
+                <div class="text-center">
+                  <a href="/tables"
+                  ><button onclick="getLocation()" class="btn btn-lg btn-primary">
+                    <span class="fa fa-location-arrow"></span></button
+                    ></a>
+                  </div>
+          <a href="/reserve"
+            ><button class="btn btn-lg btn-danger">
+              <span class="fa fa-credit-card"></span> Donate
+            </button></a
+          >
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <a href="/api/tables">Add a Review</a> |
+            <a href="/api/waitlist">About us</a>
+          </p>
+        </div>
+
+      </footer>
+    </div>
+    <script>
+      // this is to get the location 
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
   </body>
 </html>
