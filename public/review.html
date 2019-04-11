@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barks & Brews</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <span class="fa fa-paw"></span> Barks & Brews
+        </h1>
+        <hr />
+        <h2 class="text-center">
+          Tell us where you are
+        </h2>
+        <br />
+
+        <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="name"></label>
+                <input type="text" placeholder="Location" class="form-control" id="name" required/>
+                
+                <div class="text-center">
+                  <a href="/tables"
+                  ><button class="btn btn-lg btn-primary">
+                    <span class="fa fa-location-arrow"></span></button
+                    ></a>
+                  </div>
+          <a href="/reserve"
+            ><button class="btn btn-lg btn-danger">
+              <span class="fa fa-credit-card"></span> Donate
+            </button></a
+          >
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <a href="/api/tables">Add a Review</a> |
+            <a href="/api/waitlist">About us</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
