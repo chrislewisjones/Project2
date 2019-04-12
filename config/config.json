@@ -1,6 +1,7 @@
 {
   "development": {
     "username": "root",
+
     "password": "RootRoot",
     "database": "dogfriendlyplaces_db",
     "port": 3307,
