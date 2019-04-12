@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/stylesrating.css" />
     <title>Barks & Brews</title>
-
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/stylesrating.css" />
     <link
       rel="stylesheet"
@@ -30,28 +30,24 @@
         <br />
 
         <div class="card-body">
-          <form>
+          <form id="review">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name" />
             </div>
             <div class="form-group">
-              <label for="name"> Bar Name </label>
+              <label for="barname"> Bar Name </label>
               <input type="text" class="form-control" id="barname" />
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Leave a comment</label>
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="10"
-              ></textarea>
+              <label for="comment">Leave a comment</label>
+              <textarea class="form-control" id="comment" rows="10"></textarea>
             </div>
           </form>
           <!--stars -->
           <!-- code was derived from codepen -->
           <h6>Rating</h6>
-          <fieldset class="rating">
+          <fieldset class="rating" id="rate">
             <input type="radio" id="star5" name="rating" value="5" /><label
               class="full"
               for="star5"
@@ -128,7 +124,7 @@
           <br />
           <div class="text-center">
             <a href=""
-              ><button type="submit" class="btn btn-lg btn-primary" id="Submit">
+              ><button type="submit" class="btn btn-lg btn-primary" id="submit">
                 <span class="">Submit</span>
               </button></a
             >
@@ -150,5 +146,6 @@
         </div>
       </footer>
     </div>
+    <script src="./assets/js/review.js" type="text/javascript"></script>
   </body>
 </html>
