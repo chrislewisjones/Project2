@@ -1,8 +1,14 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "rootroot",
     "database": "dogfriendlyplaces_db",
+=======
+    "password": "RootRoot",
+    "database": "database_development",
+    "port": 3307,
+>>>>>>> 3d29bed494949411eb6d64f2ec9a6779974c4b93
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
