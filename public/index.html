@@ -3,42 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <title>Barks & Brews</title>
-
     <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
-          <span class="fa fa-paw"></span> Barks & Brews
+          <span class="fa fa-paw"></span> Barks & Brews <span class="fa fa-beer"></span>
         </h1>
         <hr />
         <h2 class="text-center">
           Find dog friendly bars in your area!
         </h2>
         <br />
-
-        <div class="card-body">
-            <form role="form">
-              
-                
-                <input type="text" placeholder="Location" class="form-control" id="location"/>
+        <div class = "search-group">
+        <button class="btn btn-lg btn-primary geolocator">Search Nearby
+          <span class="fa fa-location-arrow"></span></button>
+          
+         <br />
+        <form role="form">
+        <div class="input-group">    
+                <input type="text" placeholder="...or enter location" class="form-control" id="location"/>
                 <button class="btn btn-lg btn-danger">
                     <span class="fa fa-search"></span>
                   </button>
-                </form>
+                </div>
+              </form>
                 
-                  <button class="btn btn-lg btn-primary geolocator">Nearby
-                    <span class="fa fa-location-arrow"></span></button>
-
-      </div>
+            </div>
 
       <footer class="footer">
         <div class="container">
