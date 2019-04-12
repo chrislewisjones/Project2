@@ -1,10 +1,7 @@
 const yelp = require("yelp-fusion");
 var keys = require("./keys.js"); // link the keys.js
 var yKey = keys.yelpKey; // key
-const client = yelp.client(
-  yKey
-  //   "3W1Ih_3WrgJSGw3nEUgwTTZid6u70bqTF_Yw4oA4FfM_4w99b7Ruxka5J0U9PfCrIf2yCO3Nz7oD0vCcP-xlxKyhraXpRJms7XxjyQe-3VSz2OuozWUAQtn3xOerXHYx"
-);
+const client = yelp.client(yKey);
 
 exports.queryYelpNearby = function(latitude, longitude) {
   client
