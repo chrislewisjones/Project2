@@ -17,22 +17,21 @@ $(document).ready(function() {
   var commentInput = $("#comment");
   // var ratingVal="";
   // var ratingInput = $("input[type='radio'][name='rating']:checked").val();
-  
+
   // if (ratingInput.length > 0) {
-    //   ratingVal = ratingInput.val();
-    // }
-    
-    // console.log(ratingInput);
-    var reviewForm = $("#review");
-    // Adding an event listener for when the form is submitted
-    $("#submit").on("click", function() {
-      console.log("clicked");
-      // $("#review").on("submit", function(){
-        
-        
-        event.preventDefault();
-        var ratingInput = $("input[name='rating']:checked").val()
-        console.log(ratingInput)
+  //   ratingVal = ratingInput.val();
+  // }
+
+  // console.log(ratingInput);
+  var reviewForm = $("#review");
+  // Adding an event listener for when the form is submitted
+  $("#submit").on("click", function() {
+    console.log("clicked");
+    // $("#review").on("submit", function(){
+
+    event.preventDefault();
+    var ratingInput = $("input[name='rating']:checked").val();
+    console.log(ratingInput);
     // Wont submit the post if we are missing a name or a bar name or a comment
     if (
       !nameInput.val().trim() ||
@@ -52,4 +51,3 @@ $(document).ready(function() {
     console.log(newReview);
   });
 });
-
