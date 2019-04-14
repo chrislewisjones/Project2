@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/stylesrating.css" />
     <title>Barks & Brews</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/stylesrating.css" />
     <link
@@ -41,7 +42,7 @@
             </div>
             <div class="form-group">
               <label for="comment">Leave a comment</label>
-              <textarea class="form-control" id="comment" rows="10"></textarea>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
             </div>
          
           <!--stars -->
@@ -113,7 +114,7 @@
               type="radio"
               id="starhalf"
               name="rating"
-              value="half"
+              value="0.5"
             /><label
               class="half"
               for="starhalf"
@@ -130,11 +131,14 @@
             >
         <!-- </form> -->
           </div>
-          <!-- <a href="/reserve"
-            ><button class="btn btn-lg btn-danger">
-              <span class="fa fa-credit-card"></span> Donate
-            </button></a
-          > -->
+         
+        </div>
+      </div>
+      <div class="jumbotron">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2>Reviews</h2>
+          <!-- <hr> -->
+          <div id="review-area"></div>
         </div>
       </div>
 
