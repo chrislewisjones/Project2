@@ -4,30 +4,31 @@ $(document).ready(function() {
   var nameInput = $("#name");
   var barInput = $("#barname");
   var commentInput = $("#comment");
- 
-    // Adding an event listener for when the form is submitted
-    $("#submit").on("click", function() {
-      console.log("clicked");
-        event.preventDefault();
-        var ratingInput = $("input[name='rating']:checked").val()    
-          console.log(ratingInput)
-        // Constructing a newReview object to hand to the database
-        var newReview = {
-          name: nameInput.val().trim(),
-          bar_name: barInput.val().trim(),
-          comment: commentInput.val().trim(),
-          rate: ratingInput,
-          created_at: moment().format("YYYY-MM-DD HH:mm:ss")
-        };
-        
-        console.log(newReview);
-        // Wont submit the review if we are missing a name or a bar name or a comment
+  // var ratingVal="";
+  // var ratingInput = $("input[type='radio'][name='rating']:checked").val();
+
+  // if (ratingInput.length > 0) {
+  //   ratingVal = ratingInput.val();
+  // }
+
+  // console.log(ratingInput);
+  var reviewForm = $("#review");
+  // Adding an event listener for when the form is submitted
+  $("#submit").on("click", function() {
+    console.log("clicked");
+    // $("#review").on("submit", function(){
+
+    event.preventDefault();
+    var ratingInput = $("input[name='rating']:checked").val();
+    console.log(ratingInput);
+    // Wont submit the post if we are missing a name or a bar name or a comment
     if (
       !nameInput.val().trim() ||
       !barInput.val().trim() ||
       !commentInput.val().trim() ||
       !ratingInput
-    ) {
+    ) 
+    {
       return;
     }
      // Send an AJAX POST-request with jQuery
@@ -78,4 +79,3 @@ $.get("/api/all", function(data) {
   }
 });
 });
-
