@@ -14,7 +14,12 @@ module.exports = function(app) {
 
   // geolocator
   app.post("/api/geolocation", function(req, res) {
-    yelp.queryYelpNearby(req.body.latitude, req.body.longitude);
+    yelp
+      .queryYelpNearby(req.body.latitude, req.body.longitude)
+      .then(function(response) {
+        var businesses = response.jsonBody.businesses;
+        res.json(businesses);
+      });
   });
   // Get all reviews
   app.get("/api/all", function(req, res) {
