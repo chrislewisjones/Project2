@@ -14,5 +14,9 @@ $(".geolocator").click(function() {
 function getNearbyLocations(latitude, longitude) {
   $.post("/api/geolocation", { latitude, longitude }, function(response) {
     console.log("nearby:", response);
+    var item = $("<div>");
+    item.attr("id", "barName");
+    item.text(response[0].name);
+    $("#yelpResults").append(item);
   });
 }
