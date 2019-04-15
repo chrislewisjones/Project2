@@ -106,6 +106,7 @@ body {
   /* font-family: Shrikhand, cursive; */
   box-shadow: 4px 4px 15px 3px #03100bf7;
   background: rgba(204, 204, 204, 0.5);
+  color: white;
 }
 
 /* The typewriter cursor effect */
