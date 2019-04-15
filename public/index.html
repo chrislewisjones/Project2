@@ -26,55 +26,23 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/nav.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
-      <!--Navbar-->
-      <nav class="navbar navbar-light amber lighten-4 mb-4">
-        <!-- Navbar brand -->
-<<<<<<< HEAD
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-=======
-        <a class="navbar-brand" href="#"></a>
->>>>>>> master
-
-        <!-- Collapse button -->
-        <button
-          class="navbar-toggler first-button"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent20"
-          aria-controls="navbarSupportedContent20"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
         >
-          <div class="animated-icon1">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
+        <a href="/about">About</a>
+        <a href="/review">Review</a>
+      </div>
 
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/review">Reviews</a>
-            </li>
-          </ul>
-          <!-- Links -->
-        </div>
-        <!-- Collapsible content -->
-      </nav>
-      <!--/.Navbar-->
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">
+          &#9776;
+        </button>
+      </div>
     </header>
     <div class="container">
       <div class="jumbotron">
