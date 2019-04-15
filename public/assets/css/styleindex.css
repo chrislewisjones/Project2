@@ -1,0 +1,11 @@
+body {
+  background-image: url("../images/Dog-bar.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.jumbotron {
+  /* font-family: Shrikhand, cursive; */
+  box-shadow: 4px 4px 15px 3px #03100bf7;
+  background-image: url("../images/barks-brews.jpeg");
+}
