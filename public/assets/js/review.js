@@ -1,17 +1,6 @@
 $(document).ready(function() {
-  // Gets an optional query string from our url (i.e. ?review_id=23)
-  var url = window.location.search;
-  var reviewId;
-  // Sets a flag for whether or not we're updating a review to be false initially
-  var updating = false;
 
-  // If we have this section in our url, we pull out the review id from the url
-  // In localhost:8080/review?review_id=1, reviewId is 1
-  if (url.indexOf("?review_id=") !== -1) {
-    reviewId = url.split("=")[1];
-    getReviewData(reviewId);
-  }
-  // Getting jQuery references to the post body, title, form, and category select
+  // Getting jQuery references to the review body, title, form
   var nameInput = $("#name");
   var barInput = $("#barname");
   var commentInput = $("#comment");
@@ -36,18 +25,57 @@ $(document).ready(function() {
     if (
       !nameInput.val().trim() ||
       !barInput.val().trim() ||
-      !commentInput.val().trim()
-    ) {
+      !commentInput.val().trim() ||
+      !ratingInput
+    ) 
+    {
       return;
     }
-    // Constructing a newPost object to hand to the database
-    var newReview = {
-      name: nameInput.val().trim(),
-      bar: barInput.val().trim(),
-      comment: commentInput.val().trim(),
-      rate: ratingInput
-    };
+     // Send an AJAX POST-request with jQuery
+  $.post("/api/new", newReview)
+  // On success, run the following code
+  .then(function() {
 
-    console.log(newReview);
+   var row = $("<div>");
+      row.addClass("review");
+
+      row.append("<p> Name - " + newReview.name + "</p>");
+      row.append("<p> Bar Name - " + newReview.bar_name + " </p>")
+      row.append("<p> Comment - " + newReview.comment + "</p>");
+      row.append("<p> Rating - " + newReview.rate + " Stars </p>");
+      row.append("<p>At " + moment(newReview.created_at).format("h:mma on dddd, MMMM Do YYYY") + "</p>");
+      row.append("<hr>") 
+      $("#review-area").prepend(row);
+
   });
+
+// Empty each input box by replacing the value with an empty string
+$("#name").val("");
+$("#barname").val("");
+$("#comment").val("");
+$("input[name='rating']:checked").attr("checked", false);
+  });
+   // When the page loads, grab all of our reviews
+$.get("/api/all", function(data) {
+
+  if (data.length !== 0) {
+
+    for (var i = 0; i < data.length; i++) {
+
+      var row = $("<div>");
+      row.addClass("review");
+
+     
+      row.append("<p> Name - " + data[i].name + "</p>");
+      row.append("<p> Bar Name - " + data[i].bar_name + "</p>")
+      row.append("<p> Comment - " + data[i].comment + "</p>");
+      row.append("<p> Rating - " + data[i].rate + " Stars </p>");
+      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd, MMMM Do YYYY") + "</p>");
+      row.append("<hr>") 
+      $("#review-area").prepend(row);
+
+    }
+
+  }
+});
 });
