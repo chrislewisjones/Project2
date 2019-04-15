@@ -124,3 +124,10 @@ body {
     border-color: orange;
   }
 }
+
+#yelpResults {
+  display: flex;
+}
+.card-img-top {
+  height: 200px;
+}
