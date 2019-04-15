@@ -6,15 +6,16 @@
     <title>Barks & Brews</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="assets/css/stylesrating.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
     <div class="container">
@@ -42,7 +43,7 @@
           </div>
           <div class="form-group">
             <label for="comment">Leave a comment</label>
-            <textarea class="form-control" id="comment" rows="10"></textarea>
+            <textarea class="form-control" id="comment" rows="5"></textarea>
           </div>
 
           <!--stars -->
@@ -125,7 +126,7 @@
           <br />
           <div class="text-center">
             <a href=""
-              ><button type="reset" class="btn btn-lg btn-primary" id="submit">
+              ><button type="submit" class="btn btn-lg btn-primary" id="submit">
                 <span class="">Submit</span>
               </button></a
             >
@@ -136,11 +137,32 @@
       </div>
       <!-- <div class="jumbotron"> -->
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Reviews</h2>
+          <!-- <h2>Reviews</h2> -->
           <!-- <hr> -->
           <div id="review-area"></div>
         </div>
       </div>
+     
+     <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <p>Please fill out the whole form.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+</div>
 
       <footer class="footer">
         <div class="container">
