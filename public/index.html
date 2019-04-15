@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Barks & Brews</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
+    ></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="script.js"></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -15,7 +17,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./assets/css/nav.css" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
@@ -84,21 +86,16 @@
                 type="text"
                 placeholder="...or enter location"
                 class="form-control"
-                id="location"
+                id="searchText"
               />
-              <button class="btn btn-lg btn-danger">
+              <button class="btn btn-lg btn-danger entlocation">
                 <span class="fa fa-search"></span>
               </button>
             </div>
           </form>
         </div>
       </div>
-      <script
-        src="https://code.jquery.com/jquery-3.4.0.min.js"
-        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-        crossorigin="anonymous"
-      ></script>
-      <script src="assets/js/geolocator.js"></script>
+
       <!-- <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-social-feed" id="a97e981e_1555080658"></div> -->
       <div class="container text-center">
         <iframe
@@ -118,5 +115,13 @@
         <div class="container" id="results-div"></div>
       </footer>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/geolocator.js"></script>
+    <script src="assets/js/entlocator.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

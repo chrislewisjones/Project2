@@ -8,10 +8,11 @@ exports.queryYelpNearby = function(latitude, longitude) {
   client
     .search({
       term: "Dogs Allowed Bars",
+      limit: 3,
       // location: "Chicago, IL"
       // coordinates: {
-      latitude: 41.9759751,
-      longitude: -87.6750917
+      latitude: latitude,
+      longitude: longitude
       // }
     })
     .then(response => {
