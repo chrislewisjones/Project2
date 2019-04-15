@@ -103,7 +103,8 @@ body {
 
 .jumbotron {
   /* font-family: Shrikhand, cursive; */
-  background-color: wheat;
+  background-color:wheat;
+  /* color:whitesmoke; */
   box-shadow: 4px 4px 15px 3px #03100bf7;
 }
 

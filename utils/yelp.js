@@ -17,6 +17,12 @@ exports.queryYelpNearby = function(latitude, longitude) {
     })
     .then(response => {
       console.log(response.jsonBody.businesses);
+     
+    })
+    .then(function(response)
+    {
+    var pOne = $("<div>").text(response.jsonBody.businesses)
+     $("#yelpResults").append(pOne)
     })
     .catch(e => {
       console.log(e);
