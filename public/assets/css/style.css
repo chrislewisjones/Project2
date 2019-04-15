@@ -71,6 +71,7 @@ body {
   background-image: url("../images/Dog-bar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 /* About Page */
 .input-group {
