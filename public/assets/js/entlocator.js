@@ -13,13 +13,13 @@ function validateSearch() {
     .val()
     .trim();
   if (searchInput === "") {
-    alert("Please enter a Location"); // alert to be changed to modal
+    $("#myModal1").modal("toggle"); // alert to be changed to modal
     console.log("Search Input is " + searchInput);
     return false;
   }
   for (var i = 0; i < searchInput.length; i++) {
     if (specialCharacters.indexOf(searchInput.charAt(i)) !== -1) {
-      alert("Please enter a location without special characters"); // alert to be changed to modal
+      $("#myModal2").modal("toggle");; // alert to be changed to modal
       console.log("This is working");
       $("#searchText").val(" ");
       return false;
