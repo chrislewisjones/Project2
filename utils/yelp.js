@@ -7,9 +7,11 @@ console.log(yKey.key);
 exports.queryYelpNearby = function(latitude, longitude) {
   client
     .search({
+
       term: '"dogs allowed"',
       categories: "bars",
       limit: 10,
+
       // location: "Chicago, IL"
       // coordinates: {
       latitude: latitude,
@@ -18,6 +20,12 @@ exports.queryYelpNearby = function(latitude, longitude) {
     })
     .then(response => {
       console.log(response.jsonBody.businesses);
+    })
+    .then(function(response) {
+      var pOne = $("<div>");
+      pOne.attr("id", "barName");
+      pOne.text(response.jsonBody.businesses.name);
+      $("#yelpResults").append(pOne);
     })
     .catch(e => {
       console.log(e);
