@@ -18,6 +18,21 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  <header>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/">Home</a>
+      <a href="/review">Review</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">
+        &#9776;
+      </button>
+    </div>
+  </header>
   <body>
     <div class="container">
       <div class="jumbotron">
@@ -66,5 +81,6 @@
         </p>
       </div>
     </footer>
+    <script src="./assets/js/nav.js"></script>
   </body>
 </html>
