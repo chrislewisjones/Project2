@@ -1,3 +1,8 @@
+.jumbotron {
+  /* font-family: Shrikhand, cursive; */
+  background-color: wheat;
+  box-shadow: 4px 4px 15px 3px #03100bf7;
+}
 /* code was derived from codepen */
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
