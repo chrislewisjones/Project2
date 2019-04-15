@@ -4,28 +4,34 @@ $(document).ready(function() {
     event.preventDefault();
     validateSearch();
   });
+});
 
-  var specialCharacters = "~`#$%^*+=[]\\'/{}|\"<>";
+var specialCharacters = "~`#$%^*+=[]\\'/{}|\"<>";
 
-  function validateSearch() {
-    var searchInput = $("#searchText")
-      .val()
-      .trim();
-    if (searchInput === "") {
-      alert("Please enter a Location"); // alert to be changed to modal
-      console.log("Search Input is " + searchInput);
+function validateSearch() {
+  var searchInput = $("#searchText")
+    .val()
+    .trim();
+  if (searchInput === "") {
+    alert("Please enter a Location"); // alert to be changed to modal
+    console.log("Search Input is " + searchInput);
+    return false;
+  }
+  for (var i = 0; i < searchInput.length; i++) {
+    if (specialCharacters.indexOf(searchInput.charAt(i)) !== -1) {
+      alert("Please enter a location without special characters"); // alert to be changed to modal
+      console.log("This is working");
+      $("#searchText").val(" ");
       return false;
-    }
-    for (var i = 0; i < searchInput.length; i++) {
-      if (specialCharacters.indexOf(searchInput.charAt(i)) !== -1) {
-        alert("Please enter a location without special characters"); // alert to be changed to modal
-        console.log("This is working");
-        return false;
-      }
+    } else {
+      console.log("query location: ", searchInput);
+      getEntLocations(searchInput);
     }
   }
+}
 
-  // function getEntLocations(latitude, longitude) {
-  //   $.post("/api/geolocation", { latitude, longitude }, function(response) {
-  //     console.log("nearby:", response);
-});
+function getEntLocations(location) {
+  $.post("/api/entlocation", { location }, function(response) {
+    console.log("location:", response);
+  });
+}
