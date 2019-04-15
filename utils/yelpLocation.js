@@ -4,16 +4,12 @@ var yKey = keys.yelpKey; // key
 const client = yelp.client(yKey.key);
 console.log(yKey.key);
 
-exports.queryYelpNearby = function(latitude, longitude) {
+exports.queryYelpLocation = function(location) {
   client
     .search({
       term: "Dogs Allowed Bars",
       limit: 3,
-      // location: "Chicago, IL"
-      // coordinates: {
-      latitude: latitude,
-      longitude: longitude
-      // }
+      location: location
     })
     .then(response => {
       console.log(response.jsonBody.businesses);
