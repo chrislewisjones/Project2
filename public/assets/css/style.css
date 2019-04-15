@@ -1,3 +1,8 @@
+body {
+  background-image: url("../images/grey-dog.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /* About Page */
 .input-group {
   width: 100%;
@@ -29,7 +34,7 @@
 
 .jumbotron {
   /* font-family: Shrikhand, cursive; */
-  background-color:wheat;
+  background-color: wheat;
   box-shadow: 4px 4px 15px 3px #03100bf7;
 }
 
