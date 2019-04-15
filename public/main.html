@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Barks and Brews Intro Page</title>
+    <title>Barks & Brews</title>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
@@ -28,13 +26,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+   
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-
     <header>
       <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()"
           >&times;</a
         >
         <a href="/about">About</a>
@@ -49,6 +47,7 @@
     </header>
     <div class="container">
       <div class="jumbotron">
+        
         <h1 class="text-center">
           <span class="fa fa-paw"></span> Barks & Brews
           <span class="fa fa-beer"></span>
@@ -80,8 +79,7 @@
         </div>
         <div id="restaurants"></div>
       </div>
-
-
+    
       <!-- Modal -->
       <div class="modal fade" id="myModal1" role="dialog">
         <div class="modal-dialog">
@@ -105,7 +103,6 @@
 
       <div id="yelpResults"></div>
 
-
       <!-- Modal -->
       <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog">
@@ -127,12 +124,6 @@
         </div>
       </div>
       <footer class="footer">
-        <div class="container">
-          <!-- <p>
-            <a href="/review">Add a Review</a> |
-            <a href="/about">About us</a>
-          </p> -->
-        </div>
         <div class="container text-center">
           <iframe
             src="https://www.powr.io/plugins/social-feed/view/19377117"
@@ -149,22 +140,5 @@
     <script src="assets/js/entlocator.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/nav.js"></script>
-    <script src="../utils/yelp.js"></script>
-    <div class="row">
-      <h1 id="logo-header">Barks and Brews</h1>
-      <p id="instructions">
-        Confirm you are 21 years of age or older and discover dog friendly bars
-        in your area<br /><br />
-      </p>
-
-      <a
-        class="btn btn-primary btn-lg pulse"
-        id="age-confirm"
-        href="/main"
-        role="button"
-        >21+</a
-      >
-    </div>
-
   </body>
 </html>
