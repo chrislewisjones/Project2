@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Barks & Brews</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
+    ></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link
       rel="stylesheet"
@@ -14,8 +17,22 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    
   </head>
+  <header>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/">Home</a>
+      <a href="/review">Review</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">
+        &#9776;
+      </button>
+    </div>
+  </header>
   <body>
     <div class="container">
       <div class="jumbotron">
@@ -64,5 +81,6 @@
         </p>
       </div>
     </footer>
+    <script src="./assets/js/nav.js"></script>
   </body>
 </html>

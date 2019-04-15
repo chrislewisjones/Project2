@@ -26,52 +26,23 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/nav.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
-      <!--Navbar-->
-      <nav class="navbar navbar-light amber lighten-4 mb-4">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
-
-        <!-- Collapse button -->
-        <button
-          class="navbar-toggler first-button"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent20"
-          aria-controls="navbarSupportedContent20"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
         >
-          <div class="animated-icon1">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
+        <a href="/about">About</a>
+        <a href="/review">Review</a>
+      </div>
 
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
-          <!-- Links -->
-        </div>
-        <!-- Collapsible content -->
-      </nav>
-      <!--/.Navbar-->
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">
+          &#9776;
+        </button>
+      </div>
     </header>
     <div class="container">
       <div class="jumbotron">
@@ -104,17 +75,9 @@
             </div>
           </form>
         </div>
+        <div id="restaurants"></div>
       </div>
 
-      <!-- <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-social-feed" id="a97e981e_1555080658"></div> -->
-      <div class="container text-center">
-        <iframe
-          src="https://www.powr.io/plugins/social-feed/view/19377117"
-          style="width:100%;"
-          height="900px"
-          frameborder="0"
-        ></iframe>
-      </div>
 
       <!-- Modal -->
       <div class="modal fade" id="myModal1" role="dialog">
@@ -136,7 +99,9 @@
           </div>
         </div>
       </div>
+
       <div id="yelpResults"></div>
+
 
       <!-- Modal -->
       <div class="modal fade" id="myModal2" role="dialog">
@@ -165,6 +130,14 @@
             <a href="/about">About us</a>
           </p>
         </div>
+        <div class="container text-center">
+          <iframe
+            src="https://www.powr.io/plugins/social-feed/view/19377117"
+            style="width:100%;"
+            height="450px"
+            frameborder="0"
+          ></iframe>
+        </div>
         <div class="container" id="results-div"></div>
       </footer>
     </div>
@@ -172,5 +145,6 @@
     <script src="assets/js/geolocator.js"></script>
     <script src="assets/js/entlocator.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/nav.js"></script>
   </body>
 </html>

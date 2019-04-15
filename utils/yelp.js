@@ -7,8 +7,11 @@ console.log(yKey.key);
 exports.queryYelpNearby = function(latitude, longitude) {
   client
     .search({
-      term: "`Dogs Allowed` bars",
-      limit: 1,
+
+      term: '"dogs allowed"',
+      categories: "bars",
+      limit: 10,
+
       // location: "Chicago, IL"
       // coordinates: {
       latitude: latitude,
