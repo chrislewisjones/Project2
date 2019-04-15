@@ -68,9 +68,10 @@
 }
 /* Nav Bar End */
 body {
-  background-image: url("../images/grey-dog.png");
+  background-image: url("../images/Dog-bar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 /* About Page */
 .input-group {
@@ -103,9 +104,13 @@ body {
 
 .jumbotron {
   /* font-family: Shrikhand, cursive; */
+<<<<<<< HEAD
   background-color:wheat;
   /* color:whitesmoke; */
+=======
+>>>>>>> master
   box-shadow: 4px 4px 15px 3px #03100bf7;
+  background: rgba(204, 204, 204, 0.5);
 }
 
 /* The typewriter cursor effect */
