@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barks & Brews</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="/about">About</a>
+        <a href="/review">Review</a>
+      </div>
+
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">
+          &#9776;
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <span class="fa fa-paw"></span> Barks & Brews
+          <span class="fa fa-beer"></span>
+        </h1>
+        <hr />
+        <h2 class="text-center">
+          Find dog friendly bars in your area!
+        </h2>
+        <br />
+        <div class="search-group">
+          <button class="btn btn-lg btn-primary geolocator">
+            Search Nearby <span class="fa fa-location-arrow"></span>
+          </button>
+
+          <br />
+          <form role="form">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="...or enter location"
+                class="form-control"
+                id="searchText"
+              />
+              <button class="btn btn-lg btn-danger entlocation">
+                <span class="fa fa-search"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="restaurants"></div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Please enter location.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="yelpResults"></div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Please enter location without special characters.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container text-center">
+          <iframe
+            src="https://www.powr.io/plugins/social-feed/view/19377117"
+            style="width:100%;"
+            height="450px"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div class="container" id="results-div"></div>
+      </footer>
+    </div>
+
+    <script src="assets/js/geolocator.js"></script>
+    <script src="assets/js/entlocator.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/nav.js"></script>
+  </body>
+</html>
