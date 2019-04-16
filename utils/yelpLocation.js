@@ -8,6 +8,7 @@ exports.queryYelpLocation = function(location) {
   client
     .search({
       term: "DogsAllowed",
+      categories: "bars",
       limit: 3,
       location: location
     })

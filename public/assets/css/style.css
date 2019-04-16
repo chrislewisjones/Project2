@@ -171,3 +171,8 @@ pre {
 iframe {
   padding-top: 20%;
 }
+
+/* Logo font */
+#logoFont {
+  font-family: "Allerta Stencil", sans-serif;
+}
