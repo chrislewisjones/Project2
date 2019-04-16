@@ -7,7 +7,7 @@ console.log(yKey.key);
 exports.queryYelpLocation = function(location) {
   client
     .search({
-      term: "DogsAllowed",
+      term: '"dogs allowed"',
       categories: "bars",
       limit: 3,
       location: location
