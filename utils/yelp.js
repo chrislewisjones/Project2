@@ -7,7 +7,9 @@ exports.queryYelpNearby = function(latitude, longitude) {
   return client.search({
     term: '"dogs allowed"',
     categories: "bars",
+
     radius: 10000,
+
     limit: 3,
     // location: "Chicago, IL"
     // coordinates: {
