@@ -104,14 +104,14 @@ body {
 
 .jumbotron {
   /* font-family: Shrikhand, cursive; */
-<<<<<<< HEAD
-  background-color:wheat;
-  /* color:whitesmoke; */
-=======
->>>>>>> master
   box-shadow: 4px 4px 15px 3px #03100bf7;
   background: rgba(204, 204, 204, 0.5);
+=======
+  /* box-shadow: 4px 4px 15px 3px #03100bf7; */
+  background: none;
+>>>>>>> master
   color: white;
+  font-size: 150%;
 }
 
 /* The typewriter cursor effect */
@@ -136,6 +136,9 @@ body {
 }
 #reviewSubmitBtn {
   color: white;
+  background-color: rgb(32, 18, 9);
+}
+#ageBtn {
   background-color: rgb(32, 18, 9);
 }
 
