@@ -4,16 +4,16 @@ $(document).ready(function() {
   // Getting jQuery references to the review body, title, form
   var nameInput = $("#name");
   var barInput = $("#barname");
+  var reviewUrl = window.location.href.split("=")[1].split("%").join(" ");
+// split("%").join(" ");
+console.log(reviewUrl);
+barInput.val(reviewUrl);
 
 
   var commentInput = $("#comment");
   
   // Adding an event listener for when the form is submitted
   $("#submit").on("click", function() {
-    var reviewUrl = window.location.href.split("=")[1].split("%").join(" ");
-// split("%").join(" ");
-  console.log(reviewUrl);
-  barInput.val(reviewUrl);
   console.log("clicked");  
     event.preventDefault();
     var ratingInput = $("input[name='rating']:checked").val();
@@ -63,7 +63,7 @@ $("#name").val("");
 $("#barname").val("");
 $("#comment").val("");
 $("input[name='rating']:checked").attr("checked", false);
-// window.location.href = "/readreview";
+window.location.href = "/main";
 
   });
    // When the page loads, grab all of our reviews
