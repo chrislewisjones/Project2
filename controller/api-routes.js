@@ -21,6 +21,15 @@ module.exports = function(app) {
         res.json(businesses);
       });
   });
+
+  // entlocation
+  app.post("/api/geolocation", function(req, res) {
+    yelp.queryYelpEntered(req.body.location.city).then(function(response) {
+      var businesses = response.jsonBody.businesses;
+      res.json(businesses);
+    });
+  });
+
   // Get all reviews
   app.get("/api/all", function(req, res) {
     // Finding all reviews, and then returning them to the user as JSON.
