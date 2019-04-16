@@ -102,12 +102,10 @@ body {
   }
 }
 
-.jumbotron {
-  /* font-family: Shrikhand, cursive; */
-  /* box-shadow: 4px 4px 15px 3px #03100bf7; */
+#jumboTranslucent {
   background: none;
   color: white;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 /* The typewriter cursor effect */
@@ -120,7 +118,14 @@ body {
     border-color: orange;
   }
 }
-/* Main Page */
+/* Main Page/Review Page */
+.jumbotron {
+  box-shadow: 4px 4px 15px 3px #03100bf7;
+  background: rgba(204, 204, 204, 0.5);
+  color: white;
+  /* width: 50%; */
+}
+
 /* Button colors */
 #searchbtnColor {
   color: white;
@@ -130,7 +135,7 @@ body {
   color: white;
   background-color: rgb(32, 18, 9);
 }
-#reviewSubmitBtn {
+.reviewSubmitBtn {
   color: white;
   background-color: rgb(32, 18, 9);
 }
