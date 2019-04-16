@@ -1,12 +1,19 @@
 $(document).ready(function() {
 
+
   // Getting jQuery references to the review body, title, form
   var nameInput = $("#name");
   var barInput = $("#barname");
+
+
   var commentInput = $("#comment");
   
   // Adding an event listener for when the form is submitted
   $("#submit").on("click", function() {
+    var reviewUrl = window.location.href.split("=")[1].split("%").join(" ");
+// split("%").join(" ");
+  console.log(reviewUrl);
+  barInput.val(reviewUrl);
   console.log("clicked");  
     event.preventDefault();
     var ratingInput = $("input[name='rating']:checked").val();
@@ -27,23 +34,25 @@ $(document).ready(function() {
       !commentInput.val().trim() ||
       !ratingInput
       ) {
-       return  $("#myModal").modal("toggle");
+      //  return  $("#myModal").modal("toggle");
+      alert("please enter the fields")
     } 
      // Send an AJAX POST-request with jQuery
   $.post("/api/new", newReview)
   // On success, run the following code
-  .then(function() {
+  .then(function(data) {
+console.log(data);
 
    var row = $("<div>");
       row.addClass("review");
       row.append("<p>REVIEW</p>")
       row.append("<hr>")
       row.addClass("jumbotron")
-      row.append("<p>" + newReview.name + "</p>");
-      row.append("<p> Bar Name: " + newReview.bar_name + " </p>")
-      row.append("<p> Comment: " + newReview.comment + "</p>");
-      row.append("<p> Rating: " + newReview.rate + " Stars </p>");
-      row.append("<p>At " + moment(newReview.created_at).format("h:mma on dddd, MMMM Do YYYY") + "</p>");
+      row.append("<p>" + data.name + "</p>");
+      row.append("<p> Bar Name: " + data.bar_name + " </p>")
+      row.append("<p> Comment: " + data.comment + "</p>");
+      row.append("<p> Rating: " + data.rate + " Stars </p>");
+      row.append("<p>At " + moment(data.created_at).format("h:mma on dddd, MMMM Do YYYY") + "</p>");
       row.append("<hr>") 
       $("#review-area").prepend(row);
 
@@ -54,6 +63,8 @@ $("#name").val("");
 $("#barname").val("");
 $("#comment").val("");
 $("input[name='rating']:checked").attr("checked", false);
+// window.location.href = "/readreview";
+
   });
    // When the page loads, grab all of our reviews
 $.get("/api/all", function(data) {
