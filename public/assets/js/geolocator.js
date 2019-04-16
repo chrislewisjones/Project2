@@ -8,6 +8,7 @@ $(".geolocator").click(function() {
 
 function getNearbyLocations(latitude, longitude) {
   $.post("/api/geolocation", { latitude, longitude }, function(response) {
+    $("#yelpResults").empty();
     console.log("nearby:", response);
     for (let i = 0; i < response.length; i++) {
       var item = $("<div>");
