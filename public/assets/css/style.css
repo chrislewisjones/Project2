@@ -154,3 +154,7 @@ pre {
   color: white;
   white-space: pre;
 }
+/* main page instagram feed */
+iframe {
+  padding-top: 300px;
+}
