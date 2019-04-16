@@ -27,7 +27,8 @@ $(document).ready(function() {
       !commentInput.val().trim() ||
       !ratingInput
       ) {
-       return  $("#myModal").modal("toggle");
+      //  return  $("#myModal").modal("toggle");
+      return
     } 
      // Send an AJAX POST-request with jQuery
   $.post("/api/new", newReview)
