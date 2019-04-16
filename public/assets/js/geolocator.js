@@ -1,11 +1,8 @@
 $(".geolocator").click(function() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position.coords.latitude, position.coords.longitude);
-    let latitude = position.coords.latitude;
-
-    let longitude = position.coords.longitude;
-
-    getNearbyLocations(latitude, longitude);
+    let x = position.coords.latitude;
+    let y = position.coords.longitude;
+    getNearbyLocations(x, y);
   });
 });
 
@@ -20,11 +17,17 @@ function getNearbyLocations(latitude, longitude) {
         } class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${
           response[i].name
         }</h5><p class="card-text">${response[i].location.address1}
-        <br>${
-          response[i].location.city
-
-        }</p><a href=/review?data=${response[i].name.split(" ").join("%")} class="btn btn-primary" >Leave Review</a><a href="/readreview" class="btn btn-success">Read Reviews</a></div></div>`
-
+        <br>${response[i].location.city}</p><a href=/review?data=${response[
+          i
+        ].name
+          .split(" ")
+          .join(
+            "%"
+          )} class="btn btn-primary">Leave Review</a><a href=/readreview?data=${response[
+          i
+        ].name
+          .split(" ")
+          .join("%")}  class="btn btn-success">Read Reviews</a></div></div>`
       );
       $("#yelpResults").append(item);
     }

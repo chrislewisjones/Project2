@@ -32,13 +32,20 @@ module.exports = function(app) {
   });
 
   // Get all reviews
-  app.get("/api/all", function(req, res) {
+  app.post("/api/reviews/", function(req, res) {
+    var name = req.body.barName;
+
     // Finding all reviews, and then returning them to the user as JSON.
     // Sequelize queries are asynchronous, which helps with perceived speed.
     // If we want something to be guaranteed to happen after the query, we'll use
     // the .then function
-    db.Review.findAll({}).then(function(results) {
+    db.Review.findAll({
+      where: {
+        bar_name: name
+      }
+    }).then(function(results) {
       // results are available to us inside the .then
+      console.log(results);
       res.json(results);
     });
   });
