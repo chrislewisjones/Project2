@@ -2,10 +2,8 @@ $(".geolocator").click(function() {
   navigator.geolocation.getCurrentPosition(function(position) {
     console.log(position.coords.latitude, position.coords.longitude);
     let latitude = position.coords.latitude;
-    console.log(latitude);
 
     let longitude = position.coords.longitude;
-    console.log(longitude);
 
     getNearbyLocations(latitude, longitude);
   });

@@ -61,7 +61,7 @@
         </h2>
         <br />
         <div class="search-group">
-          <button class="btn btn-lg btn-primary geolocator">
+          <button class="btn btn-lg geolocator" id="searchbtnColor">
             Search Nearby <span class="fa fa-location-arrow"></span>
           </button>
 
@@ -74,7 +74,7 @@
                 class="form-control"
                 id="searchText"
               />
-              <button class="btn btn-lg btn-danger entlocation">
+              <button class="btn btn-lg entlocation" id="magBtn">
                 <span class="fa fa-search"></span>
               </button>
             </div>
@@ -103,9 +103,9 @@
           </div>
         </div>
       </div>
-
-      <div id="yelpResults"></div>
-
+      <div class="text-center" id="resultsBox">
+        <div id="yelpResults"></div>
+      </div>
       <!-- Modal -->
       <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog">

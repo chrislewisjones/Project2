@@ -7,7 +7,7 @@
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: rgb(32, 18, 9); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -41,7 +41,7 @@
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: rgb(32, 18, 9);
   color: white;
   padding: 10px 15px;
   border: none;
@@ -124,10 +124,38 @@ body {
     border-color: orange;
   }
 }
+/* Main Page */
+/* Button colors */
+#searchbtnColor {
+  color: white;
+  background-color: rgb(32, 18, 9);
+}
+#magBtn {
+  color: white;
+  background-color: rgb(32, 18, 9);
+}
+#reviewSubmitBtn {
+  color: white;
+  background-color: rgb(32, 18, 9);
+}
 
+/* Appended Yelp Results */
 #yelpResults {
   display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
 }
 .card-img-top {
   height: 200px;
+}
+#resultsBox {
+  background: rgba(204, 204, 204, 0.5);
+  height: 400px;
+  border-radius: 0.3rem;
+}
+
+pre {
+  font-weight: bold;
+  color: white;
+  white-space: pre;
 }
