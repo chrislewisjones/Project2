@@ -44,7 +44,7 @@ function getEntLocation(searchInput) {
         }</h5><p class="card-text">${response[i].location.address1}
         <br>${
           response[i].location.city
-        }</p><a href="../review.html" class="btn btn-primary">Leave Review</a><a href="../readreview.html class="btn btn-success">Read Reviews</a></div></div>`
+        }</p><a href="/review" class="btn btn-primary">Leave Review</a><a href="/readreview" class="btn btn-success">Read Reviews</a></div></div>`
       );
       $("#yelpResults").append(item);
     }
