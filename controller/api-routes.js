@@ -23,8 +23,9 @@ module.exports = function(app) {
   });
 
   // entlocation
-  app.post("/api/geolocation", function(req, res) {
-    yelp.queryYelpEntered(req.body.location.city).then(function(response) {
+  app.post("/api/entlocation", function(req, res) {
+    console.log(req.body.location);
+    yelp.queryYelpEntered(req.body.location).then(function(response) {
       var businesses = response.jsonBody.businesses;
       res.json(businesses);
     });

@@ -7,11 +7,22 @@ exports.queryYelpNearby = function(latitude, longitude) {
   return client.search({
     term: '"dogs allowed"',
     categories: "bars",
-    radius: 1610,
-    limit: 10,
+
+    radius: 10000,
+
+    limit: 3,
     // location: "Chicago, IL"
     // coordinates: {
     latitude: latitude,
     longitude: longitude
+  });
+};
+
+exports.queryYelpEntered = function(location) {
+  return client.search({
+    term: '"dogs allowed"',
+    categories: "bars",
+    limit: 3,
+    location: location
   });
 };
