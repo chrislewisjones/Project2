@@ -23,15 +23,16 @@ function validateSearch() {
       console.log("This is working");
       $("#searchText").val(" ");
       return false;
-    } else {
-      console.log("query location: ", searchInput);
-      getEntLocation(searchInput);
     }
   }
+  console.log("query location: ", searchInput);
+  getEntLocation(searchInput);
 }
 
 function getEntLocation(searchInput) {
-  $.post("/api/entlocation", { location }, function(response) {
+  console.log(searchInput);
+
+  $.post("/api/entlocation", { location: searchInput }, function(response) {
     console.log("location:", response);
     for (let i = 0; i < response.length; i++) {
       var item = $("<div>");
