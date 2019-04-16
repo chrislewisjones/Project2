@@ -26,12 +26,15 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+   
+
+   
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
       <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()"
           >&times;</a
         >
         <a href="/about">About</a>
@@ -44,8 +47,10 @@
         </button>
       </div>
     </header>
+  
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron animated bounceIn">
+        
         <h1 class="text-center">
           <span class="fa fa-paw"></span> Barks & Brews
           <span class="fa fa-beer fa-flip-horizontal"></span>
@@ -77,7 +82,7 @@
         </div>
         <div id="restaurants"></div>
       </div>
-
+    </div>
       <!-- Modal -->
       <div class="modal fade" id="myModal1" role="dialog">
         <div class="modal-dialog">
@@ -138,5 +143,6 @@
     <script src="assets/js/entlocator.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="./assets/js/review.js" type="text/javascript"></script>
   </body>
 </html>
