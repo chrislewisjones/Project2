@@ -22,7 +22,7 @@ function getNearbyLocations(latitude, longitude) {
         }</h5><p class="card-text">${response[i].location.address1}
         <br>${
           response[i].location.city
-        }</p><a href="#" class="btn btn-primary" >Leave Review</a><button class="btn btn-success">Read Reviews</button></div></div>`
+        }</p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" >Leave Review</a><button class="btn btn-success">Read Reviews</button></div></div>`
       );
       $("#yelpResults").append(item);
     }
