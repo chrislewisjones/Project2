@@ -149,7 +149,7 @@ body {
   height: 200px;
 }
 #resultsBox {
-  background: rgba(204, 204, 204, 0.5);
+  background: rgb(32, 18, 9);
   height: 400px;
   border-radius: 0.3rem;
 }
