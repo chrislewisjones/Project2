@@ -33,6 +33,7 @@ function getEntLocation(searchInput) {
   console.log(searchInput);
 
   $.post("/api/entlocation", { location: searchInput }, function(response) {
+    $("#yelpResults").empty();
     console.log("location:", response);
     for (let i = 0; i < response.length; i++) {
       var item = $("<div>");
@@ -44,9 +45,7 @@ function getEntLocation(searchInput) {
         }</h5><p class="card-text">${response[i].location.address1}
         <br>${
           response[i].location.city
-
         }</p><a href="/review" class="btn btn-primary">Leave Review</a><a href="/readreview" class="btn btn-success">Read Reviews</a></div></div>`
-
       );
       $("#yelpResults").append(item);
     }
