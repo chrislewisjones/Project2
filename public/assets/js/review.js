@@ -34,10 +34,10 @@ $(document).ready(function() {
       !commentInput.val().trim() ||
       !ratingInput
       ) {
-        $("#myModal").modal("toggle");
-        return }
+        return $("#myModal").modal("toggle");
+          //  return  $("#myModal").modal("toggle");
       // alert("please enter the fields");
-
+    }
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newReview)
       // On success, run the following code
@@ -48,6 +48,8 @@ $(document).ready(function() {
         $("#comment").val("");
         $("input[name='rating']:checked").attr("checked", false);
         window.location.href = "/main";
-      }
-    })
+      });
+
+    // Empty each input box by replacing the value with an empty string
   });
+});
