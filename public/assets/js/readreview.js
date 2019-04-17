@@ -8,7 +8,7 @@ $.post("/api/reviews/", { barName }, function(data) {
     for (var i = 0; i < data.length; i++) {
       var row = $("<div>");
       row.addClass("review");
-      row.append("<p>REVIEW</p>");
+      
       row.append("<hr>");
       row.addClass("jumbotron");
       row.append("<p> Name - " + data[i].name + "</p>");
