@@ -33,10 +33,11 @@ $(document).ready(function() {
       !barInput.val().trim() ||
       !commentInput.val().trim() ||
       !ratingInput
-    ) {
-      //  return  $("#myModal").modal("toggle");
-      alert("please enter the fields");
-    }
+      ) {
+        $("#myModal").modal("toggle");
+        return }
+      // alert("please enter the fields");
+
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newReview)
       // On success, run the following code
@@ -48,7 +49,5 @@ $(document).ready(function() {
         $("input[name='rating']:checked").attr("checked", false);
         window.location.href = "/main";
       }
-
-    // Empty each input box by replacing the value with an empty string
+    })
   });
-});
