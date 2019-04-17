@@ -36,7 +36,6 @@ $(document).ready(function() {
     ) {
       //  return  $("#myModal").modal("toggle");
       alert("please enter the fields");
-<<<<<<< HEAD
     }
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newReview)
@@ -52,62 +51,4 @@ $(document).ready(function() {
 
     // Empty each input box by replacing the value with an empty string
   });
-  // When the page loads, grab all of our reviews
-=======
-    }
-    // Send an AJAX POST-request with jQuery
-    $.post("/api/new", newReview)
-      // On success, run the following code
-      .then(function(data) {
-        console.log(data);
-
-        var row = $("<div>");
-        row.addClass("review");
-        row.append("<p>REVIEW</p>");
-        row.append("<hr>");
-        row.addClass("jumbotron");
-        row.append("<p>" + data.name + "</p>");
-        row.append("<p> Bar Name: " + data.bar_name + " </p>");
-        row.append("<p> Comment: " + data.comment + "</p>");
-        row.append("<p> Rating: " + data.rate + " Stars </p>");
-        row.append(
-          "<p>At " +
-            moment(data.created_at).format("h:mma on dddd, MMMM Do YYYY") +
-            "</p>"
-        );
-        row.append("<hr>");
-        $("#review-area").prepend(row);
-      });
-
-    // Empty each input box by replacing the value with an empty string
-    $("#name").val("");
-    $("#barname").val("");
-    $("#comment").val("");
-    $("input[name='rating']:checked").attr("checked", false);
-    window.location.href = "/readreview";
-  });
-  // When the page loads, grab all of our reviews
-  $.get("/api/all", function(data) {
-    if (data.length !== 0) {
-      for (var i = 0; i < data.length; i++) {
-        var row = $("<div>");
-        row.addClass("review");
-        row.append("<p>REVIEW</p>");
-        row.append("<hr>");
-        row.addClass("jumbotron");
-        row.append("<p> Name - " + data[i].name + "</p>");
-        row.append("<p> Bar Name - " + data[i].bar_name + "</p>");
-        row.append("<p> Comment - " + data[i].comment + "</p>");
-        row.append("<p> Rating - " + data[i].rate + " Stars </p>");
-        row.append(
-          "<p>At " +
-            moment(data[i].created_at).format("h:mma on dddd, MMMM Do YYYY") +
-            "</p>"
-        );
-        row.append("<hr>");
-        $("#review-area").prepend(row);
-      }
-    }
-  });
->>>>>>> master
 });
