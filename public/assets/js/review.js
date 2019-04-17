@@ -23,7 +23,7 @@ $(document).ready(function() {
       bar_name: barInput.val().trim(),
       comment: commentInput.val().trim(),
       rate: ratingInput,
-      created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+      created_at: moment().format("YYYY-MM-DD HH:mm:ss") 
     };
 
     console.log(newReview);
@@ -34,8 +34,8 @@ $(document).ready(function() {
       !commentInput.val().trim() ||
       !ratingInput
     ) {
-      //  return  $("#myModal").modal("toggle");
-      alert("please enter the fields");
+       return  $("#myModal").modal("toggle");
+      // alert("please enter the fields");
     }
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newReview)
