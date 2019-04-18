@@ -1,4 +1,4 @@
-# Barks & Brews
+# :dog: Barks & Brews :beer:
 
 Where “Man’s best friend” meets “Saturdays are not just for the boys anymore”
 
@@ -8,7 +8,7 @@ Where “Man’s best friend” meets “Saturdays are not just for the boys any
 
 ## Description
 
-Barks & Brews is a community driven website where users can look-up bars based off their current location or a city they are going to visited.  They can also leave reviews of the place they decide to visit, and read other reviews from other users.  This will eventually turn into a verified database of bars that are indeed dog friendly #barks&brewscertified.
+Barks & Brews is a community driven website where users can look-up bars based off their current location or a city they are going to visited. They can also leave reviews of the place they decide to visit, and read other reviews from other users. This will eventually turn into a verified database of bars that are indeed dog friendly #barks&brewscertified.
 
 ## Technologies Used
 
@@ -16,7 +16,8 @@ Barks & Brews is a community driven website where users can look-up bars based o
 
 - Bootstrap (responsive)
 - Powr
-- jQuery 
+- jQuery
+
 ### Back-end
 
 - Nodejs
@@ -26,22 +27,24 @@ Barks & Brews is a community driven website where users can look-up bars based o
 - Yelp Fusion
 - Axios
 - Moment.js
+
 ### Database
 
 - MySQl
 
-
 ### Deployment
 
 - Heroku
-- JAWS-DB 
+- JAWS-DB
+
 ---
+
 ## Authors
 
 [Chris Jones](https://github.com/chrislewisjones)
-[Irfan Patel ](https://github.com/irfanp90) 
+[Irfan Patel ](https://github.com/irfanp90)
 [Peter Stone](https://github.com/PeterStone6391)
-[Christine Trinh](https://github.com/christineit) 
+[Christine Trinh](https://github.com/christineit)
 
 ## License & Copyright
 
