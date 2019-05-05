@@ -9,18 +9,18 @@ $.post("/api/reviews/", { barName }, function(data) {
       var row = $("<div>");
       row.addClass("review");
       
+      row.append("<p> Bar Name - " + data[i].bar_name + "</p>");
       row.append("<hr>");
       row.addClass("jumbotron");
       row.append("<p> Name - " + data[i].name + "</p>");
-      row.append("<p> Bar Name - " + data[i].bar_name + "</p>");
       row.append("<p> Comment - " + data[i].comment + "</p>");
-      row.append("<p> Rating - " + data[i].rate + " Stars </p>");
+      row.append("<p> Rating - " + data[i].rate + " ⭐(s)</p>");
+      row.append("<hr>");
       row.append(
         "<p>At " +
           moment(data[i].created_at).format("h:mma on dddd, MMMM Do YYYY") +
           "</p>"
       );
-      row.append("<hr>");
       $("#review-area").prepend(row);
     }
   } else {

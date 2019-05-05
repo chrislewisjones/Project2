@@ -9,7 +9,7 @@ body {
   justify-content: center;
 }
 .jumbotron {
-  box-shadow: 4px 4px 15px 3px #03100bf7;
+  box-shadow: 4px 4px 15px 3px   rgb(32, 18, 9);
   background: rgba(204, 204, 204, 0.5);
   color: white;
   width: 50%;
