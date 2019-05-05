@@ -1,3 +1,14 @@
+.review{
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.form-group{
+  font-weight:bold;
+  font-size: 20px;
+
+}
+
 /* Nav Bar */
 /* The sidebar menu */
 .sidebar {
@@ -126,7 +137,7 @@ body {
 .jumbotron {
   box-shadow: 4px 4px 15px 3px #03100bf7;
   background: rgba(204, 204, 204, 0.5);
-  color: white;
+  color:rgb(32, 18, 9)
   /* width: 50%; */
 }
 
